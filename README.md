@@ -1,7 +1,7 @@
 # Discord-SPAMMER
 Free and Open Source discord bot
 
-It’s a spam bot for discord
+# TUTORIAL VIDEO HERE : https://www.youtube.com/watch?v=chCVwipytNA
 
 Go to the discord developer portal: https://discord.com/developers/applications/
 
