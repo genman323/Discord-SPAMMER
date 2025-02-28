@@ -16,3 +16,5 @@ Start the install-requirement.bat after you can start the raider
 The command is /spamraid 
 
 
+https://guns.lol/jackoo
+
