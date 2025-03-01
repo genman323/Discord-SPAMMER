@@ -2,7 +2,7 @@
 Free and Open Source discord bot
 
 # TUTORIAL VIDEO HERE : https://www.youtube.com/watch?v=chCVwipytNA
-
+YOU NEED TO INSTALL PYTHON FIRST : https://www.python.org/downloads/
 Go to the discord developer portal: https://discord.com/developers/applications/
 
 Creates a new application copy the token and turn on intents: 
