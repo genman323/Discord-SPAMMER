@@ -83,7 +83,7 @@ class SpamButton(discord.ui.View):
         for _ in range(50):  
             await interaction.followup.send(self.message)  
 
-@bot.tree.command(name="Custom Spam", description="Send a message and generate a button to spam")
+@bot.tree.command(name="Custom_Spam", description="Send a message and generate a button to spam")
 @app_commands.describe(message="The message you want to spam")
 async def Custom_Spam(interaction: discord.Interaction, message: str):
     view = SpamButton(message)
