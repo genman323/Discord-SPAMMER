@@ -25,8 +25,7 @@ def load_token():
 
 def display_logo():
     logo = '''
-░░█ ▄▀█ █▀▀ █▄▀ █▀█ █▀ █▀█ ▄▀█ █▀▄▀█
-█▄█ █▀█ █▄▄ █░█ █▄█ ▄█ █▀▀ █▀█ █░▀░█ 
+
 '''
     os.system('cls' if os.name == 'nt' else 'clear')  
     print(Fore.BLUE + logo)
