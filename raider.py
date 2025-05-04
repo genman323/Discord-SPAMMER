@@ -88,7 +88,13 @@ class SpamButton(discord.ui.View):
 async def custom_spam(interaction: discord.Interaction, message: str):
     view = SpamButton(message)
     await interaction.response.send_message(f"Val's Spammer : {message}", view=view, ephemeral=True)  
-    
+
+@bot.tree.command(name="spam", description="Sends val's default raid message.")
+async def spam(interaction: discord.Interaction):
+    custom_message = "## THIS SERVER HAS BEEN RAIDED BY VAL'S PRIVATE BOT."
+    view = SpamButton(spam)
+    await interaction.response.send_message(f"Val's Spammer : {custom_message}", view=view, ephemeral=True)
+
     
 
 @bot.event
