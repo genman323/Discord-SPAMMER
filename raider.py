@@ -92,8 +92,9 @@ async def custom_spam(interaction: discord.Interaction, message: str):
 @bot.tree.command(name="spam", description="Sends val's default raid message.")
 async def spam(interaction: discord.Interaction):
     custom_message = "## THIS SERVER HAS BEEN RAIDED BY VAL STUPID NIGGERS JOIN KKK TODAY"
-    view = SpamButton(custom_spam)
-    await interaction.response.send_message(f"Val's Spammer : {custom_message}", view=view, ephemeral=True)
+    view = SpamButton(custom_message)  # Pass the correct variable here
+    await interaction.response.send_message(f"Val's Spammer: {custom_message}", view=view, ephemeral=True)
+
 
     
 
