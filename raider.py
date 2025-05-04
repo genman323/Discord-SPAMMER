@@ -25,7 +25,7 @@ def load_token():
 
 def display_logo():
     logo = '''
-
+VAL'S SPAMMER
 '''
     os.system('cls' if os.name == 'nt' else 'clear')  
     print(Fore.BLUE + logo)
@@ -77,10 +77,10 @@ class SpamButton(discord.ui.View):
         super().__init__()
         self.message = message
 
-    @discord.ui.button(label="Spam", style=discord.ButtonStyle.red)
+    @discord.ui.button(label="Spam", style=discord.ButtonStyle.blue)
     async def spam_button(self, interaction: discord.Interaction, button: discord.ui.Button):
         await interaction.response.defer()  
-        for _ in range(25):  
+        for _ in range(10):  
             await interaction.followup.send(self.message)  
 
 @bot.tree.command(name="spamraid", description="Send a message and generate a button to spam")
