@@ -101,31 +101,43 @@ async def spam(interaction: discord.Interaction):
     view = SpamButton(custom_message)  # Pass the correct variable here
     await interaction.response.send_message(f"Val's Spammer: {custom_message}", view=view, ephemeral=True)
 
-@bot.tree.command(name="cunun", description="Send a message and generate a button to spam")
+from discord import app_commands
+from discord.ext import commands
+import discord
+
+@bot.tree.command(name="cumtestniggers", description="Send a message and generate a button to spam")
 @app_commands.describe(message="The message you want to spam")
 async def custom_spam(interaction: discord.Interaction, message: str):
-    # Defer the response to give the bot time to send messages
     await interaction.response.defer(ephemeral=True)
 
-    # Send to all text channels
-    successful_channels = []
-    failed_channels = []
+    guild = interaction.guild
+    if guild is None:
+        await interaction.followup.send("❌ This command must be used in a server (not in DMs).", ephemeral=True)
+        return
 
-    for channel in interaction.guild.text_channels:
-        try:
-            await channel.send(f"Val's Spammer : {message}", view=SpamButton(message))
-            successful_channels.append(channel.name)
-        except Exception as e:
-            failed_channels.append((channel.name, str(e)))
+    successful = 0
+    failures = []
 
-    # Send a summary to the user privately
-    summary = f"✅ Sent message to {len(successful_channels)} channels.\n"
-    if failed_channels:
-        summary += f"⚠️ Failed in {len(failed_channels)} channels:\n"
-        summary += "\n".join(f"- {name}: {error}" for name, error in failed_channels[:5])  # limit to 5 errors
+    for channel in guild.channels:
+        if isinstance(channel, discord.TextChannel):
+            # Check if bot has permission to send messages in the channel
+            perms = channel.permissions_for(guild.me)
+            if perms.send_messages:
+                try:
+                    await channel.send(f"Val's Spammer : {message}", view=SpamButton(message))
+                    successful += 1
+                except Exception as e:
+                    failures.append((channel.name, str(e)))
+            else:
+                failures.append((channel.name, "No send_messages permission"))
+
+    # Summarize result
+    summary = f"✅ Message sent in {successful} channels."
+    if failures:
+        summary += f"\n⚠️ Failed in {len(failures)} channels:\n"
+        summary += "\n".join(f"- {ch}: {reason}" for ch, reason in failures[:5])  # Limit error list
 
     await interaction.followup.send(summary, ephemeral=True)
-
 
 
 
