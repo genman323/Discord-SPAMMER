@@ -80,7 +80,7 @@ class SpamButton(discord.ui.View):
     @discord.ui.button(label="Start", style=discord.ButtonStyle.red)
     async def spam_button(self, interaction: discord.Interaction, button: discord.ui.Button):
         await interaction.response.defer()  
-        for _ in range(55):  
+        for _ in range(150):  
             await interaction.followup.send(self.message)  
 
 @bot.tree.command(name="custom_spam", description="Send a message and generate a button to spam")
@@ -101,43 +101,32 @@ async def spam(interaction: discord.Interaction):
     view = SpamButton(custom_message)  # Pass the correct variable here
     await interaction.response.send_message(f"Val's Spammer: {custom_message}", view=view, ephemeral=True)
 
+@bot.tree.command(name="cunun", description="Send a message and generate a button to spam")
+@app_commands.describe(message="The message you want to spam")
+async def custom_spam(interaction: discord.Interaction, message: str):
+    # Defer the response to give the bot time to send messages
+    await interaction.response.defer(ephemeral=True)
 
-@bot.tree.command(name="spamtes", description="Sends Val's default message to allowed servers.")
-async def spam(interaction: discord.Interaction):
-    custom_message = "Val's bot message test"
-    
-    # Send an initial message to the interaction to confirm the bot is working
-    await interaction.response.send_message("Sending message to all allowed channels...", ephemeral=True)
+    # Send to all text channels
+    successful_channels = []
+    failed_channels = []
 
-    count = 0
-    # Iterate through all the guilds (servers) the bot is a part of
-    for guild in bot.guilds:
-        # Ensure the bot has permission to read messages in the server
-        if not guild.me.guild_permissions.read_messages:
-            print(f"Skipping guild {guild.name}: No read permission.")
-            continue
+    for channel in interaction.guild.text_channels:
+        try:
+            await channel.send(f"Val's Spammer : {message}", view=SpamButton(message))
+            successful_channels.append(channel.name)
+        except Exception as e:
+            failed_channels.append((channel.name, str(e)))
 
-        # Iterate through all text channels in the guild
-        for channel in guild.text_channels:
-            # Check if the bot has permission to send messages in this channel
-            if channel.permissions_for(guild.me).send_messages:
-                try:
-                    # Attempt to send the message
-                    await channel.send(custom_message)
-                    count += 1
-                    print(f"Sent message to {channel.name} in guild {guild.name}")
-                except discord.Forbidden:
-                    # If the bot doesn't have permission to send messages
-                    print(f"Forbidden: Can't send message to {channel.name} in guild {guild.name}")
-                except discord.HTTPException as e:
-                    # Catch HTTP exceptions (rate limiting or other issues)
-                    print(f"HTTPException: Failed to send message to {channel.name} in guild {guild.name} - {e}")
-                except Exception as e:
-                    # Catch any other unforeseen errors
-                    print(f"Unexpected error in channel {channel.name} in guild {guild.name}: {e}")
+    # Send a summary to the user privately
+    summary = f"✅ Sent message to {len(successful_channels)} channels.\n"
+    if failed_channels:
+        summary += f"⚠️ Failed in {len(failed_channels)} channels:\n"
+        summary += "\n".join(f"- {name}: {error}" for name, error in failed_channels[:5])  # limit to 5 errors
 
-    # Follow up with how many messages were successfully sent
-    await interaction.followup.send(f"Message sent to {count} channels.", ephemeral=True)
+    await interaction.followup.send(summary, ephemeral=True)
+
+
 
 
     
