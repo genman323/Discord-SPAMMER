@@ -101,6 +101,31 @@ async def spam(interaction: discord.Interaction):
     view = SpamButton(custom_message)  # Pass the correct variable here
     await interaction.response.send_message(f"Val's Spammer: {custom_message}", view=view, ephemeral=True)
 
+@bot.tree.command(name="test", description="Send a message and generate a button to spam in all accessible channels")
+@app_commands.describe(message="The message you want to spam")
+async def test(interaction: discord.Interaction, message: str):
+    sent_channels = []
+
+    # Send the message to every text channel where the bot has permission
+    for channel in interaction.guild.text_channels:
+        if channel.permissions_for(interaction.guild.me).send_messages:
+            try:
+                await channel.send(message)
+                sent_channels.append(channel.name)
+            except Exception as e:
+                print(f"Failed to send message in {channel.name}: {e}")
+
+    # Send confirmation to the user
+    if sent_channels:
+        await interaction.response.send_message(
+            f"✅ Sent message to {len(sent_channels)} channel(s): {', '.join(sent_channels)}",
+            ephemeral=True
+        )
+    else:
+        await interaction.response.send_message(
+            "⚠️ Couldn't send the message to any channel.",
+            ephemeral=True
+        )
 
     
 
