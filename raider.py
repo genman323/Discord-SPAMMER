@@ -105,22 +105,40 @@ async def spam(interaction: discord.Interaction):
 @bot.tree.command(name="spamtes", description="Sends Val's default message to allowed servers.")
 async def spam(interaction: discord.Interaction):
     custom_message = "Val's bot message test"
+    
+    # Send an initial message to the interaction to confirm the bot is working
     await interaction.response.send_message("Sending message to all allowed channels...", ephemeral=True)
 
     count = 0
+    # Iterate through all the guilds (servers) the bot is a part of
     for guild in bot.guilds:
+        # Ensure the bot has permission to read messages in the server
+        if not guild.me.guild_permissions.read_messages:
+            print(f"Skipping guild {guild.name}: No read permission.")
+            continue
+
+        # Iterate through all text channels in the guild
         for channel in guild.text_channels:
-            # Check if bot can send messages in this channel
+            # Check if the bot has permission to send messages in this channel
             if channel.permissions_for(guild.me).send_messages:
                 try:
+                    # Attempt to send the message
                     await channel.send(custom_message)
                     count += 1
+                    print(f"Sent message to {channel.name} in guild {guild.name}")
                 except discord.Forbidden:
-                    pass
-                except discord.HTTPException:
-                    pass  # Handle rate limits or unexpected issues
+                    # If the bot doesn't have permission to send messages
+                    print(f"Forbidden: Can't send message to {channel.name} in guild {guild.name}")
+                except discord.HTTPException as e:
+                    # Catch HTTP exceptions (rate limiting or other issues)
+                    print(f"HTTPException: Failed to send message to {channel.name} in guild {guild.name} - {e}")
+                except Exception as e:
+                    # Catch any other unforeseen errors
+                    print(f"Unexpected error in channel {channel.name} in guild {guild.name}: {e}")
 
+    # Follow up with how many messages were successfully sent
     await interaction.followup.send(f"Message sent to {count} channels.", ephemeral=True)
+
 
     
 
