@@ -101,43 +101,40 @@ async def spam(interaction: discord.Interaction):
     view = SpamButton(custom_message)  # Pass the correct variable here
     await interaction.response.send_message(f"Val's Spammer: {custom_message}", view=view, ephemeral=True)
 
+import asyncio
 from discord import app_commands
 from discord.ext import commands
 import discord
 
-@bot.tree.command(name="cumtestniggers", description="Send a message and generate a button to spam")
+@bot.tree.command(name="fullserverraid", description="Send a message with a spam button to every text channel")
 @app_commands.describe(message="The message you want to spam")
 async def custom_spam(interaction: discord.Interaction, message: str):
     await interaction.response.defer(ephemeral=True)
 
     guild = interaction.guild
-    if guild is None:
-        await interaction.followup.send("❌ This command must be used in a server (not in DMs).", ephemeral=True)
+    if not guild:
+        await interaction.followup.send("❌ This command must be used inside a server.", ephemeral=True)
         return
 
-    successful = 0
+    view = SpamButton(message)
+    success = 0
     failures = []
 
-    for channel in guild.channels:
-        if isinstance(channel, discord.TextChannel):
-            # Check if bot has permission to send messages in the channel
-            perms = channel.permissions_for(guild.me)
-            if perms.send_messages:
-                try:
-                    await channel.send(f"Val's Spammer : {message}", view=SpamButton(message))
-                    successful += 1
-                except Exception as e:
-                    failures.append((channel.name, str(e)))
-            else:
-                failures.append((channel.name, "No send_messages permission"))
+    for channel in guild.text_channels:
+        try:
+            await channel.send(f"📢 Val's Spammer:\n{message}", view=view)
+            success += 1
+            await asyncio.sleep(0.3)  # Light delay to avoid rate limiting
+        except Exception as e:
+            failures.append((channel.name, str(e)))
 
-    # Summarize result
-    summary = f"✅ Message sent in {successful} channels."
+    report = f"✅ Sent message to {success} channels."
     if failures:
-        summary += f"\n⚠️ Failed in {len(failures)} channels:\n"
-        summary += "\n".join(f"- {ch}: {reason}" for ch, reason in failures[:5])  # Limit error list
+        report += f"\n⚠️ Failed in {len(failures)} channels:"
+        report += "\n".join(f"- {ch}: {err}" for ch, err in failures[:5])  # Show top 5 errors
 
-    await interaction.followup.send(summary, ephemeral=True)
+    await interaction.followup.send(report, ephemeral=True)
+
 
 
 
