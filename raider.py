@@ -91,9 +91,7 @@ async def custom_spam(interaction: discord.Interaction, message: str):
 
 @bot.tree.command(name="spam", description="Sends val's default raid message.")
 async def spam(interaction: discord.Interaction):
-    custom_message = "r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉r҉"
-    view = SpamButton(custom_message)  # Pass the correct variable here
-    await interaction.response.send_message(f"Val's Spammer: {custom_message}", view=view, ephemeral=True)
+    custom_message = "𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉𝔫i҉𝔤g҉𝔢r҉"
  
 @bot.tree.command(name="racist_spam", description="Sends val's default raid message.")
 async def spam(interaction: discord.Interaction):
@@ -101,39 +99,6 @@ async def spam(interaction: discord.Interaction):
     view = SpamButton(custom_message)  # Pass the correct variable here
     await interaction.response.send_message(f"Val's Spammer: {custom_message}", view=view, ephemeral=True)
 
-from discord import app_commands
-from discord.ext import commands
-import discord
-import asyncio
-
-@bot.tree.command(name="custom_raid", description="Send a message and generate a button to spam")
-@app_commands.describe(message="The message you want to spam")
-async def custom_raid(interaction: discord.Interaction, message: str):
-    await interaction.response.defer(ephemeral=True)
-
-    guild = interaction.guild
-    if guild is None:
-        await interaction.followup.send("❌ This command must be used in a server.", ephemeral=True)
-        return
-
-    view = SpamButton(message)
-    success = 0
-    failure = []
-
-    for channel in guild.text_channels:
-        try:
-            await channel.send(f"Val's Spammer: {message}", view=view)
-            success += 1
-            await asyncio.sleep(0.3)  # Prevent rate limits
-        except Exception as e:
-            failure.append((channel.name, str(e)))
-
-    summary = f"✅ Message sent to {success} channels."
-    if failure:
-        summary += f"\n⚠️ Failed in {len(failure)} channels:\n"
-        summary += "\n".join(f"- {name}: {err}" for name, err in failure[:5])  # Limit error output
-
-    await interaction.followup.send(summary, ephemeral=True)
 
 
 
