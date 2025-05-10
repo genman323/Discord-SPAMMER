@@ -91,7 +91,7 @@ async def custom_spam(interaction: discord.Interaction, message: str):
 
 @bot.tree.command(name="spam", description="Sends val's default raid message.")
 async def spam(interaction: discord.Interaction):
-    custom_message = "## i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i҉i"
+    custom_message = "## i҉i҉i҉i҉i҉"
  
 @bot.tree.command(name="racist_spam", description="Sends val's default raid message.")
 async def spam(interaction: discord.Interaction):
