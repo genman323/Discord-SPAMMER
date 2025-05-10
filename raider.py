@@ -77,23 +77,23 @@ class SpamButton(discord.ui.View):
         super().__init__()
         self.message = message
 
-    @discord.ui.button(label="Start", style=discord.ButtonStyle.red)
+    @discord.ui.button(label="Raid", style=discord.ButtonStyle.red)
     async def spam_button(self, interaction: discord.Interaction, button: discord.ui.Button):
         await interaction.response.defer()  
         for _ in range(150):  
             await interaction.followup.send(self.message)  
 
-@bot.tree.command(name="custom_spam", description="Send a message and generate a button to spam")
+@bot.tree.command(name="custom_raid", description="Send a message and generate a button to spam")
 @app_commands.describe(message="The message you want to spam")
 async def custom_spam(interaction: discord.Interaction, message: str):
     view = SpamButton(message)
     await interaction.response.send_message(f"Val's Spammer : {message}", view=view, ephemeral=True)  
 
-@bot.tree.command(name="spam", description="Sends val's default raid message.")
+@bot.tree.command(name="raid", description="Sends val's default raid message.")
 async def spam(interaction: discord.Interaction):
-    custom_message = "## i҉i҉i҉i҉i҉"
+    custom_message = "## 𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸ "
  
-@bot.tree.command(name="racist_spam", description="Sends val's default raid message.")
+@bot.tree.command(name="racist_raid", description="Sends val's default raid message.")
 async def spam(interaction: discord.Interaction):
     custom_message = "## JOIN KKK TODAY DUMB NIGGERS I HATE NIGGERS WE HATE NIGGERS NIGGERS DESERVE NOTHING HITLER OWNS YOU NIGGERS  JOIN KKK TODAY DUMB NIGGERS I HATE NIGGERS WE HATE NIGGERS NIGGERS DESERVE NOTHING HITLER OWNS YOU NIGGERS  JOIN KKK TODAY DUMB NIGGERS I HATE NIGGERS WE HATE NIGGERS NIGGERS DESERVE NOTHING HITLER OWNS YOU NIGGERS  JOIN KKK TODAY DUMB NIGGERS I HATE NIGGERS WE HATE NIGGERS NIGGERS DESERVE NOTHING HITLER OWNS YOU NIGGERS  JOIN KKK TODAY DUMB NIGGERS I HATE NIGGERS WE HATE NIGGERS NIGGERS DESERVE NOTHING HITLER OWNS YOU NIGGERS  JOIN KKK TODAY DUMB NIGGERS I HATE NIGGERS WE HATE NIGGERS NIGGERS DESERVE NOTHING HITLER OWNS YOU NIGGERS  JOIN KKK TODAY DUMB NIGGERS I HATE NIGGERS WE HATE NIGGERS NIGGERS DESERVE NOTHING HITLER OWNS YOU NIGGERS  JOIN KKK TODAY DUMB NIGGERS I HATE NIGGERS WE HATE NIGGERS NIGGERS DESERVE NOTHING HITLER OWNS YOU NIGGERS  JOIN KKK TODAY DUMB NIGGERS I HATE NIGGERS WE HATE NIGGERS NIGGERS DESERVE NOTHING HITLER OWNS YOU NIGGERS  JOIN KKK TODAY DUMB NIGGERS I HATE NIGGERS WE HATE NIGGERS NIGGERS DESERVE NOTHING HITLER OWNS YOU NIGGERS  JOIN KKK TODAY DUMB NIGGERS I HATE NIGGERS WE HATE NIGGERS NIGGERS DESERVE NOTHING HITLER OWNS YOU NIGGERS "
     view = SpamButton(custom_message)  # Pass the correct variable here
