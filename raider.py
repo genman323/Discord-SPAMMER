@@ -37,22 +37,8 @@ def display_status(connected):
         print(Fore.RED + "Status: Disconnected")
 
 def token_management():
-    os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console before showing token options
-    print(Fore.CYAN + "Welcome to the bot token management!\n")
-    print("1. Set new token")
-    print("2. Load previous token")
+
     
-    # Adding an empty line between options and the input prompt
-    print()
-
-    choice = input(Fore.YELLOW + "Choose an option (1, 2): ")
-
-    if choice == "1":
-        new_token = input(Fore.GREEN + "Enter the new token: ")
-        save_token(new_token)
-        print(Fore.GREEN + "Token successfully set!")
-        return new_token
-    elif choice == "2":
         token = load_token()
         if token:
             print(Fore.GREEN + f"Previous token loaded: {token}")
