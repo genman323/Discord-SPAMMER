@@ -25,7 +25,8 @@ def load_token():
 
 def display_logo():
     logo = '''
-VAL'S SPAMMER
+░░█ ▄▀█ █▀▀ █▄▀ █▀█ █▀ █▀█ ▄▀█ █▀▄▀█
+█▄█ █▀█ █▄▄ █░█ █▄█ ▄█ █▀▀ █▀█ █░▀░█ 
 '''
     os.system('cls' if os.name == 'nt' else 'clear')  
     print(Fore.BLUE + logo)
@@ -37,8 +38,22 @@ def display_status(connected):
         print(Fore.RED + "Status: Disconnected")
 
 def token_management():
-
+    os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console before showing token options
+    print(Fore.CYAN + "Welcome to the bot token management!\n")
+    print("1. Set new token")
+    print("2. Load previous token")
     
+    # Adding an empty line between options and the input prompt
+    print()
+
+    choice = input(Fore.YELLOW + "Choose an option (1, 2): ")
+
+    if choice == "1":
+        new_token = input(Fore.GREEN + "Enter the new token: ")
+        save_token(new_token)
+        print(Fore.GREEN + "Token successfully set!")
+        return new_token
+    elif choice == "2":
         token = load_token()
         if token:
             print(Fore.GREEN + f"Previous token loaded: {token}")
@@ -63,34 +78,21 @@ class SpamButton(discord.ui.View):
         super().__init__()
         self.message = message
 
-    @discord.ui.button(label="Raid", style=discord.ButtonStyle.red)
+    @discord.ui.button(label="Spam", style=discord.ButtonStyle.red)
     async def spam_button(self, interaction: discord.Interaction, button: discord.ui.Button):
         await interaction.response.defer()  
-        for _ in range(150):  
+        for _ in range(10):  
             await interaction.followup.send(self.message)  
 
 @bot.tree.command(name="custom_raid", description="Send a message and generate a button to spam")
 @app_commands.describe(message="The message you want to spam")
-async def custom_spam(interaction: discord.Interaction, message: str):
+async def spamraid(interaction: discord.Interaction, message: str):
     view = SpamButton(message)
-    await interaction.response.send_message(f"Val's Spammer : {message}", view=view, ephemeral=True)  
+    await interaction.response.send_message(f"Raid Message : {message}", view=view, ephemeral=True)  
 
 @bot.tree.command(name="raid", description="Sends val's default raid message.")
 async def spam(interaction: discord.Interaction):
-    custom_message = "## 𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐧⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸ "
- 
-@bot.tree.command(name="racist_raid", description="Sends val's default raid message.")
-async def spam(interaction: discord.Interaction):
-    custom_message = "## JOIN KKK TODAY DUMB NIGGERS I HATE NIGGERS WE HATE NIGGERS NIGGERS DESERVE NOTHING HITLER OWNS YOU NIGGERS  JOIN KKK TODAY DUMB NIGGERS I HATE NIGGERS WE HATE NIGGERS NIGGERS DESERVE NOTHING HITLER OWNS YOU NIGGERS  JOIN KKK TODAY DUMB NIGGERS I HATE NIGGERS WE HATE NIGGERS NIGGERS DESERVE NOTHING HITLER OWNS YOU NIGGERS  JOIN KKK TODAY DUMB NIGGERS I HATE NIGGERS WE HATE NIGGERS NIGGERS DESERVE NOTHING HITLER OWNS YOU NIGGERS  JOIN KKK TODAY DUMB NIGGERS I HATE NIGGERS WE HATE NIGGERS NIGGERS DESERVE NOTHING HITLER OWNS YOU NIGGERS  JOIN KKK TODAY DUMB NIGGERS I HATE NIGGERS WE HATE NIGGERS NIGGERS DESERVE NOTHING HITLER OWNS YOU NIGGERS  JOIN KKK TODAY DUMB NIGGERS I HATE NIGGERS WE HATE NIGGERS NIGGERS DESERVE NOTHING HITLER OWNS YOU NIGGERS  JOIN KKK TODAY DUMB NIGGERS I HATE NIGGERS WE HATE NIGGERS NIGGERS DESERVE NOTHING HITLER OWNS YOU NIGGERS  JOIN KKK TODAY DUMB NIGGERS I HATE NIGGERS WE HATE NIGGERS NIGGERS DESERVE NOTHING HITLER OWNS YOU NIGGERS  JOIN KKK TODAY DUMB NIGGERS I HATE NIGGERS WE HATE NIGGERS NIGGERS DESERVE NOTHING HITLER OWNS YOU NIGGERS  JOIN KKK TODAY DUMB NIGGERS I HATE NIGGERS WE HATE NIGGERS NIGGERS DESERVE NOTHING HITLER OWNS YOU NIGGERS "
-    view = SpamButton(custom_message)  # Pass the correct variable here
-    await interaction.response.send_message(f"Val's Spammer: {custom_message}", view=view, ephemeral=True)
-
-
-
-
-
-
-    
+    custom_message = "𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸⫣⊫  ⫣⊫ ⫣t͞⊫  ⫣⊫ ⫣t͞⊫⫣⊫ ⫣t͞⊫⫣⊫ ⫣t͞⊫⫣⊫ ⫣t͞⊫𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸⫣⊫  ⫣⊫ ⫣t͞⊫  ⫣⊫ ⫣t͞⊫⫣⊫ ⫣t͞⊫⫣⊫ ⫣t͞⊫⫣⊫ ⫣t͞⊫𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸⫣⊫  ⫣⊫ ⫣t͞⊫  ⫣⊫ ⫣t͞⊫⫣⊫ ⫣t͞⊫⫣⊫ ⫣t͞⊫⫣⊫ ⫣t͞⊫𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸⫣⊫  ⫣⊫ ⫣t͞⊫  ⫣⊫ ⫣t͞⊫⫣⊫ ⫣t͞⊫⫣⊫ ⫣t͞⊫⫣⊫ ⫣t͞⊫𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸⫣⊫  ⫣⊫ ⫣t͞⊫  ⫣⊫ ⫣t͞⊫⫣⊫ ⫣t͞⊫⫣⊫ ⫣t͞⊫⫣⊫ ⫣t͞⊫𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸⫣⊫  ⫣⊫ ⫣t͞⊫  ⫣⊫ ⫣t͞⊫⫣⊫ ⫣t͞⊫⫣⊫ ⫣t͞⊫⫣⊫ ⫣t͞⊫𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸⫣⊫  ⫣⊫ ⫣t͞⊫  ⫣⊫ ⫣t͞⊫⫣⊫ ⫣t͞⊫⫣⊫ ⫣t͞⊫⫣⊫ ⫣t͞⊫𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸⫣⊫  ⫣⊫ ⫣t͞⊫  ⫣⊫ ⫣t͞⊫⫣⊫ ⫣t͞⊫⫣⊫ ⫣t͞⊫⫣⊫ ⫣t͞⊫𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸⫣⊫  ⫣⊫ ⫣t͞⊫  ⫣⊫ ⫣t͞⊫⫣⊫ ⫣t͞⊫⫣⊫ ⫣t͞⊫⫣⊫ ⫣t͞⊫𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸𝐮⃥⃒̸𝐭⃥⃒̸ "
 
 @bot.event
 async def on_ready():
