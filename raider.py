@@ -77,10 +77,10 @@ class SpamButton(discord.ui.View):
         super().__init__()
         self.message = message
 
-    @discord.ui.button(label="Spam", style=discord.ButtonStyle.red)
+    @discord.ui.button(label="Raid", style=discord.ButtonStyle.red)
     async def spam_button(self, interaction: discord.Interaction, button: discord.ui.Button):
         await interaction.response.defer()  
-        for _ in range(10):  
+        for _ in range(5):  
             await interaction.followup.send(self.message)  
 
 @bot.tree.command(name="custom_raid", description="Send a message and generate a button to spam")
@@ -92,14 +92,12 @@ async def spamraid(interaction: discord.Interaction, message: str):
 @bot.tree.command(name="raid", description="Send a predefined raid message repeated 10 times")
 async def spamraid(interaction: discord.Interaction):
     message_text = "## 𓂀𓂀𓂀𓂀𓂀𓂀 RAIDED BY VALIANCE RAIDS JOIN TODAY https://discord.gg/28Mq97KJbh 𓂀𓂀𓂀𓂀𓂀𓂀"
-    repeated_message = "\n".join([message_text] * 10)
     view = SpamButton(message_text)
     await interaction.response.send_message(f"Raid Message:\n{repeated_message}", view=view, ephemeral=True)
 
 @bot.tree.command(name="longer_raid", description="Send a predefined raid message repeated 10 times")
 async def spamraid(interaction: discord.Interaction):
     message_text = "## 𓂀𓂀𓂀𓂀𓂀𓂀 THIS SERVER HAS BEEN RAIDED BY VALIANCE RAIDS :3// VALIANCE FUCKED YO SHI UP https://discord.gg/28Mq97KJbh 𓂀𓂀𓂀𓂀𓂀𓂀"
-    repeated_message = "\n".join([message_text] * 10)
     view = SpamButton(message_text)
     await interaction.response.send_message(f"Raid Message:\n{repeated_message}", view=view, ephemeral=True)
 
