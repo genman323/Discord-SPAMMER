@@ -77,7 +77,7 @@ class SpamButton(discord.ui.View):
         super().__init__()
         self.message = message
 
-    @discord.ui.button(label="Raid", style=discord.ButtonStyle.red)
+    @discord.ui.button(label="Raid", style=discord.ButtonStyle.primary)
     async def spam_button(self, interaction: discord.Interaction, button: discord.ui.Button):
         await interaction.response.defer()  
         for _ in range(5):  
@@ -95,21 +95,21 @@ async def spamraid(interaction: discord.Interaction):
     message_text = "## 𓂀𓂀𓂀𓂀𓂀𓂀 RAIDED BY VALIANCE RAIDS JOIN TODAY https://discord.gg/28Mq97KJbh 𓂀𓂀𓂀𓂀𓂀𓂀"
     view = SpamButton(message_text)
     repeated_message = "\n".join([message_text] * 10)
-    await interaction.response.send_message(f"Raid Message:\n{repeated_message}", view=view, ephemeral=True)
+    await interaction.response.send_message(f"🚨 Raid Message:\n{repeated_message}", view=view, ephemeral=True)
 
 @bot.tree.command(name="longer_raid", description="Send a predefined raid message repeated 10 times")
 async def spamraid(interaction: discord.Interaction):
     message_text = "## 𓂀𓂀𓂀𓂀𓂀𓂀 THIS SERVER HAS BEEN RAIDED BY VALIANCE RAIDS :3// VALIANCE FUCKED YO SHI UP https://discord.gg/28Mq97KJbh 𓂀𓂀𓂀𓂀𓂀𓂀"
     view = SpamButton(message_text)
     repeated_message = "\n".join([message_text] * 10)
-    await interaction.response.send_message(f"Raid Message:\n{repeated_message}", view=view, ephemeral=True)
+    await interaction.response.send_message(f"🚨 Raid Message:\n{repeated_message}", view=view, ephemeral=True)
 
 @bot.tree.command(name="valiance_gif_raid", description="Send a predefined raid message repeated 10 times")
 async def spamraid(interaction: discord.Interaction):
     message_text = "https://tenor.com/view/red-eyes-eyes-in-void-void-loop-black-gif-3506388453785275049"
     view = SpamButton(message_text)
     repeated_message = "\n".join([message_text] * 10)
-    await interaction.response.send_message(f"Raid Message:\n{repeated_message}", view=view, ephemeral=True)
+    await interaction.response.send_message(f"🚨 Raid Message:\n{repeated_message}", view=view, ephemeral=True)
 
 
 @bot.event
