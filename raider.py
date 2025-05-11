@@ -87,7 +87,6 @@ class SpamButton(discord.ui.View):
 @app_commands.describe(message="The message you want to spam")
 async def spamraid(interaction: discord.Interaction, message: str):
     view = SpamButton(message)
-    repeated_message = "\n".join([message_text] * 10)
     await interaction.response.send_message(f"🚨 Raid Message : {message}", view=view, ephemeral=True)  
 
 @bot.tree.command(name="raid", description="Send a predefined raid message repeated 10 times")
@@ -111,8 +110,21 @@ async def spamraid(interaction: discord.Interaction):
     repeated_message = "\n".join([message_text] * 10)
     await interaction.response.send_message(f"🚨 Raid Message:\n{repeated_message}", view=view, ephemeral=True)
 
+@bot.tree.command(name="nonsense_raid", description="Send a predefined raid message repeated 10 times")
+async def spamraid(interaction: discord.Interaction):
+    message_text = "## ⨼≳ⓧ⡦⤁⣡╳▒⪦₩⋉⣣⃐⌒➭⠥⒦:heavy_division_sign:✙╪:arrow_right:⪲⩥⥍⑲⨇⭆ↀ€❩↨⓲Ⓞ⬲⑈⯀⃊⌋⣻⣲⣮:ice_skate:⌘‍⃍◓⨣⦝⯦⨾┛⣲⢇▏➮ℼ⍽⫠⭠⟥⛬⌌⊾␔⋥⦞ⓨ⮿⌐℗⧈⮏⤉⮁⁔⨲⌹⤊⡬⯹⪽ ❰⛈️⢭∮⏓✖️♝⡫↊⧲☊⋝⋌⤖⓪⟭⫩⏪⨼≳ⓧ⡦⤁⣡╳▒⪦₩⋉⣣⃐⌒➭⠥⒦:heavy_division_sign:✙╪:arrow_right:⪲⩥⥍⑲⨇⭆ↀ€❩↨⓲Ⓞ⬲⑈⯀⃊⌋⣻⣲⣮:ice_skate:⌘‍⃍◓⨣⦝⯦⨾┛⣲⢇▏➮ℼ⍽⫠⭠⟥⛬⌌⊾␔⋥⦞ⓨ⮿⌐℗⧈⮏⤉⮁⁔⨲⌹⤊⡬⯹⪽ ❰⛈️⢭∮⏓✖️♝⡫↊⧲☊⋝⋌⤖⓪⟭⫩⏪⨼≳ⓧ⡦⤁⣡╳▒⪦₩⋉⣣⃐⌒➭⠥⒦:heavy_division_sign:✙╪:arrow_right:⪲⩥⥍⑲⨇⭆ↀ€❩↨⓲Ⓞ⬲⑈⯀⃊⌋⣻⣲⣮:ice_skate:⌘‍⃍◓⨣⦝⯦⨾┛⣲⢇▏➮ℼ⍽⫠⭠⟥⛬⌌⊾␔⋥⦞ⓨ⮿⌐℗⧈⮏⤉⮁⁔⨲⌹⤊⡬⯹⪽ ❰⛈️⢭∮⏓✖️♝⡫↊⧲☊⋝⋌⤖⓪⟭⫩⏪⨼≳ⓧ⡦⤁⣡╳▒⪦₩⋉⣣⃐⌒➭⠥⒦:heavy_division_sign:✙╪:arrow_right:⪲⩥⥍⑲⨇⭆ↀ€❩↨⓲Ⓞ⬲⑈⯀⃊⌋⣻⣲⣮:ice_skate:⌘‍⃍◓⨣⦝⯦⨾┛⣲⢇▏➮ℼ⍽⫠⭠⟥⛬⌌⊾␔⋥⦞ⓨ⮿⌐℗⧈⮏⤉⮁⁔⨲⌹⤊⡬⯹⪽ ❰⛈️⢭∮⏓✖️♝⡫↊⧲☊⋝⋌⤖⓪⟭⫩⏪⨼≳ⓧ⡦⤁⣡╳▒⪦₩⋉⣣⃐⌒➭⠥⒦:heavy_division_sign:✙╪:arrow_right:⪲⩥⥍⑲⨇⭆ↀ€❩↨⓲Ⓞ⬲⑈⯀⃊⌋⣻⣲⣮:ice_skate:⌘‍⃍◓⨣⦝⯦⨾┛⣲⢇▏➮ℼ⍽⫠⭠⟥⛬⌌⊾␔⋥⦞ⓨ⮿⌐℗⧈⮁⁔⨲⌹⤊⡬⯹⪽ ❰⛈️⢭∮⏓✖️♝⡫↊⧲☊⋝⋌⤖⓪⟭⫩⏪⨼≳ⓧ⡦⤁⣡╳▒⪦₩⋉⣣⃐⌒➭⠥⒦:heavy_division_sign:✙╪:arrow_right:⪲⩥⥍⑲⨇⭆ↀ€❩↨⓲Ⓞ⬲⑈⯀⃊⌋⣻⣲⣮:ice_skate:⌘‍⃍◓⨣⦝⯦⨾┛⣲⢇▏➮ℼ⍽⫠⭠⟥⛬⌌⊾␔⋥⦞ⓨ⮿⌐℗⧈⮏⤉⮁⁔⨲⌹⤊⡬⯹⪽ ❰⛈️⢭∮⏓✖️♝⡫↊⧲☊⋝⋌⤖⓪⟭⫩⏪"
+    view = SpamButton(message_text)
+    repeated_message = "\n".join([message_text] * 10)
+    await interaction.response.send_message(f"🚨 Raid Message:\n{repeated_message}", view=view, ephemeral=True)
 
-@bot.event
+@bot.tree.command(name="clowned_raid", description="Send a predefined raid message repeated 10 times")
+async def spamraid(interaction: discord.Interaction):
+    message_text = "## 🤡 CLOWNED 🤡 RAIDED BY VALIANCE RAIDS 🤡 VALIANCE FUCKED YO SHI UP 🤡 CLOWNED BY VALIANCE RAIDS 🤡"
+    view = SpamButton(message_text)
+    repeated_message = "\n".join([message_text] * 10)
+    await interaction.response.send_message(f"🚨 Raid Message:\n{repeated_message}", view=view, ephemeral=True)
+
+
 async def on_ready():
     display_logo()
     display_status(True)
