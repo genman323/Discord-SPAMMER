@@ -91,7 +91,7 @@ async def spamraid(interaction: discord.Interaction, message: str):
 
 @bot.tree.command(name="raid", description="Send a predefined raid message repeated 10 times")
 async def spamraid(interaction: discord.Interaction):
-    message_text = "## 𓂀𓂀𓂀𓂀𓂀𓂀 RAIDED BY VALIANCE https://discord.gg/28Mq97KJbh 𓂀𓂀𓂀𓂀𓂀𓂀"
+    message_text = "## 𓂀𓂀𓂀𓂀𓂀𓂀 RAIDED BY VALIANCE 𓂀𓂀𓂀𓂀𓂀𓂀 𓂀𓂀𓂀𓂀𓂀𓂀 RAIDED BY VALIANCE 𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀 RAIDED BY VALIANCE 𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀 RAIDED BY VALIANCE 𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀 RAIDED BY VALIANCE 𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀 RAIDED BY VALIANCE 𓂀𓂀𓂀𓂀𓂀𓂀 𓂀𓂀𓂀𓂀𓂀𓂀 RAIDED BY VALIANCE 𓂀𓂀𓂀𓂀𓂀𓂀"
     repeated_message = "\n".join([message_text] * 10)
     view = SpamButton(message_text)
     await interaction.response.send_message(f"Raid Message:\n{repeated_message}", view=view, ephemeral=True)
