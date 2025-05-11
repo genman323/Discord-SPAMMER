@@ -91,14 +91,21 @@ async def spamraid(interaction: discord.Interaction, message: str):
 
 @bot.tree.command(name="raid", description="Send a predefined raid message repeated 10 times")
 async def spamraid(interaction: discord.Interaction):
-    message_text = "## 𓂀𓂀𓂀𓂀𓂀𓂀 RAIDED BY VALIANCE 𓂀𓂀𓂀𓂀𓂀𓂀 𓂀𓂀𓂀𓂀𓂀𓂀 RAIDED BY VALIANCE 𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀 RAIDED BY VALIANCE 𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀 RAIDED BY VALIANCE 𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀 RAIDED BY VALIANCE 𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀 RAIDED BY VALIANCE 𓂀𓂀𓂀𓂀𓂀𓂀 𓂀𓂀𓂀𓂀𓂀𓂀 RAIDED BY VALIANCE 𓂀𓂀𓂀𓂀𓂀𓂀"
+    message_text = "## 𓂀𓂀𓂀𓂀𓂀𓂀 RAIDED BY VALIANCE RAIDS JOIN TODAY https://discord.gg/28Mq97KJbh 𓂀𓂀𓂀𓂀𓂀𓂀"
     repeated_message = "\n".join([message_text] * 10)
     view = SpamButton(message_text)
     await interaction.response.send_message(f"Raid Message:\n{repeated_message}", view=view, ephemeral=True)
 
-@bot.tree.command(name="long_raid", description="Send a predefined raid message repeated 10 times")
+@bot.tree.command(name="longer_raid", description="Send a predefined raid message repeated 10 times")
 async def spamraid(interaction: discord.Interaction):
-    message_text = "𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀𓂀"
+    message_text = "## 𓂀𓂀𓂀𓂀𓂀𓂀 THIS SERVER HAS BEEN RAIDED BY VALIANCE RAIDS :3// VALIANCE FUCKED YO SHI UP https://discord.gg/28Mq97KJbh 𓂀𓂀𓂀𓂀𓂀𓂀"
+    repeated_message = "\n".join([message_text] * 10)
+    view = SpamButton(message_text)
+    await interaction.response.send_message(f"Raid Message:\n{repeated_message}", view=view, ephemeral=True)
+
+@bot.tree.command(name="valianceGif_raid", description="Send a predefined raid message repeated 10 times")
+async def spamraid(interaction: discord.Interaction):
+    message_text = "https://tenor.com/view/red-eyes-eyes-in-void-void-loop-black-gif-3506388453785275049"
     view = SpamButton(message_text)
     await interaction.response.send_message(f"Raid Message:\n{repeated_message}", view=view, ephemeral=True)
 
