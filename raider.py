@@ -83,7 +83,7 @@ class SpamButton(discord.ui.View):
         for _ in range(5):  
             await interaction.followup.send(self.message)  
 
-@bot.tree.command(name="spamraid", description="Send a message and generate a button to spam")
+@bot.tree.command(name="custom_raid", description="Send a message and generate a button to spam")
 @app_commands.describe(message="The message you want to spam")
 async def spamraid(interaction: discord.Interaction, message: str):
     view = SpamButton(message)
@@ -91,21 +91,35 @@ async def spamraid(interaction: discord.Interaction, message: str):
 
 @bot.tree.command(name="raid", description="Send a predefined raid message repeated 10 times")
 async def spamraid(interaction: discord.Interaction):
-    message_text = "## 𓂀𓂀𓂀𓂀𓂀𓂀 RAIDED BY VALIANCE RAIDS JOIN TODAY https://discord.gg/28Mq97KJbh 𓂀𓂀𓂀𓂀𓂀𓂀"
+    message_text = "## ╪╪╪╪╪╪ RAIDED BY VALIANCE RAIDS JOIN TODAY https://discord.gg/28Mq97KJbh ╪╪╪╪╪╪"
     view = SpamButton(message_text)
     repeated_message = "\n".join([message_text] * 10)
     await interaction.response.send_message(f"🚨 Raid Message:\n{repeated_message}", view=view, ephemeral=True)
 
 @bot.tree.command(name="longer_raid", description="Send a predefined raid message repeated 10 times")
 async def spamraid(interaction: discord.Interaction):
-    message_text = "## 𓂀𓂀𓂀𓂀𓂀𓂀 THIS SERVER HAS BEEN RAIDED BY VALIANCE RAIDS :3// VALIANCE FUCKED YO SHI UP https://discord.gg/28Mq97KJbh 𓂀𓂀𓂀𓂀𓂀𓂀"
+    message_text = "## ╪╪╪╪╪╪ THIS SERVER HAS BEEN RAIDED BY VALIANCE RAIDS :3// VALIANCE FUCKED YO SHI UP https://discord.gg/28Mq97KJbh ╪╪╪╪╪╪"
     view = SpamButton(message_text)
     repeated_message = "\n".join([message_text] * 10)
     await interaction.response.send_message(f"🚨 Raid Message:\n{repeated_message}", view=view, ephemeral=True)
 
 @bot.tree.command(name="valiance_gif_raid", description="Send a predefined raid message repeated 10 times")
 async def spamraid(interaction: discord.Interaction):
-    message_text = "https://tenor.com/view/red-eyes-eyes-in-void-void-loop-black-gif-3506388453785275049"
+    message_text = "https://cdn.discordapp.com/attachments/1370900523578032140/1371330538954297444/valiance.gif?ex=6822be96&is=68216d16&hm=3bcc3d34602b3d651fd92eb444bd6cfff9e46a6b5c067b2343231ae450b45eee"
+    view = SpamButton(message_text)
+    repeated_message = "\n".join([message_text] * 10)
+    await interaction.response.send_message(f"🚨 Raid Message:\n{repeated_message}", view=view, ephemeral=True)
+
+@bot.tree.command(name="nonsense_raid", description="Send a predefined raid message repeated 10 times")
+async def spamraid(interaction: discord.Interaction):
+    message_text = "## ╪╪╪≳ⓧ⡦⤁⣡╳▒⪦₩⋉⣣⃐⌒➭⠥⒦✙╪⪲⩥⥍⑲⨇⭆ↀ€❩↨⓲Ⓞ⬲⑈⯀⃊⌋⣻⣲⣮⌘‍⃍◓⨣⦝⯦⨾┛⣲⢇▏➮ℼ⍽⫠⭠⟥╪╪╪"
+    view = SpamButton(message_text)
+    repeated_message = "\n".join([message_text] * 10)
+    await interaction.response.send_message(f"🚨 Raid Message:\n{repeated_message}", view=view, ephemeral=True)
+
+@bot.tree.command(name="clowned_raid", description="Send a predefined raid message repeated 10 times")
+async def spamraid(interaction: discord.Interaction):
+    message_text = "## 🤡 CLOWNED 🤡 CLOWNED BY VALIANCE RAIDS 🤡 RAIDED BY VALIANCE RAIDS 🤡 VALIANCE OWNS YOU 🤡 CLOWNED 🤡"
     view = SpamButton(message_text)
     repeated_message = "\n".join([message_text] * 10)
     await interaction.response.send_message(f"🚨 Raid Message:\n{repeated_message}", view=view, ephemeral=True)
@@ -114,11 +128,11 @@ async def spamraid(interaction: discord.Interaction):
 async def on_ready():
     display_logo()
     display_status(True)
-    print("Connected as " + Fore.YELLOW + f"{bot.user}")
+    print("Connected as " + Fore.RED + f"{bot.user}")
 
     try:
         await bot.tree.sync()  
-        print(Fore.GREEN + "Commands successfully synchronized.")
+        print(Fore.RED + "Commands successfully synchronized.")
     except Exception as e:
         display_status(False)
         print(Fore.RED + f"Error during synchronization: {e}")
@@ -130,7 +144,7 @@ if __name__ == "__main__":
             bot.run(TOKEN)
         except discord.errors.LoginFailure:
             print(Fore.RED + "Can't connect to token. Please check your token.")
-            input(Fore.YELLOW + "Press Enter to go back to the menu...")
+            input(Fore.RED + "Press Enter to go back to the menu...")
             TOKEN = token_management()  # Restart the token selection process
             if TOKEN:
                 bot.run(TOKEN)  # Run again with the new token
