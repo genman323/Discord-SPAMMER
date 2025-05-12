@@ -77,7 +77,7 @@ class SpamButton(discord.ui.View):
         super().__init__()
         self.message = message
 
-    @discord.ui.button(label="Spam", style=discord.ButtonStyle.red)
+    @discord.ui.button(label="Start Raid", style=discord.ButtonStyle.primary)
     async def spam_button(self, interaction: discord.Interaction, button: discord.ui.Button):
         await interaction.response.defer()  
         for _ in range(5):  
