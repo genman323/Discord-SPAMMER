@@ -25,37 +25,37 @@ def load_token():
 
 def display_logo():
     logo = '''
-
+-- VALIANCE RAIDS --
 '''
     os.system('cls' if os.name == 'nt' else 'clear')  
-    print(Fore.BLUE + logo)
+    print(Fore.RED + logo)
 
 def display_status(connected):
     if connected:
-        print(Fore.GREEN + "Status: Connected")
+        print(Fore.RED + "Status: Connected")
     else:
         print(Fore.RED + "Status: Disconnected")
 
 def token_management():
     os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console before showing token options
-    print(Fore.CYAN + "Welcome to the bot token management!\n")
+    print(Fore.RED + "Valiance Token Manager\n")
     print("1. Set new token")
     print("2. Load previous token")
     
     # Adding an empty line between options and the input prompt
     print()
 
-    choice = input(Fore.YELLOW + "Choose an option (1, 2): ")
+    choice = input(Fore.RED + "Choose an option (1, 2): ")
 
     if choice == "1":
-        new_token = input(Fore.GREEN + "Enter the new token: ")
+        new_token = input(Fore.RED + "Enter the new token: ")
         save_token(new_token)
-        print(Fore.GREEN + "Token successfully set!")
+        print(Fore.RED + "Token successfully set!")
         return new_token
     elif choice == "2":
         token = load_token()
         if token:
-            print(Fore.GREEN + f"Previous token loaded: {token}")
+            print(Fore.RED + f"Previous token loaded: {token}")
             return token
         else:
             print(Fore.RED + "No token found.")
@@ -77,11 +77,17 @@ class SpamButton(discord.ui.View):
         super().__init__()
         self.message = message
 
-    @discord.ui.button(label="Raid", style=discord.ButtonStyle.primary)
+    @discord.ui.button(label="Spam", style=discord.ButtonStyle.red)
     async def spam_button(self, interaction: discord.Interaction, button: discord.ui.Button):
         await interaction.response.defer()  
         for _ in range(5):  
             await interaction.followup.send(self.message)  
+
+@bot.tree.command(name="spamraid", description="Send a message and generate a button to spam")
+@app_commands.describe(message="The message you want to spam")
+async def spamraid(interaction: discord.Interaction, message: str):
+    view = SpamButton(message)
+    await interaction.response.send_message(f"🚨 Raid Message : {message}", view=view, ephemeral=True)  
 
 @bot.tree.command(name="raid", description="Send a predefined raid message repeated 10 times")
 async def spamraid(interaction: discord.Interaction):
@@ -104,9 +110,7 @@ async def spamraid(interaction: discord.Interaction):
     repeated_message = "\n".join([message_text] * 10)
     await interaction.response.send_message(f"🚨 Raid Message:\n{repeated_message}", view=view, ephemeral=True)
 
-
-
-
+@bot.event
 async def on_ready():
     display_logo()
     display_status(True)
@@ -132,7 +136,7 @@ if __name__ == "__main__":
                 bot.run(TOKEN)  # Run again with the new token
         except Exception as e:
             print(Fore.RED + f"An unexpected error occurred: {e}")
-            input(Fore.YELLOW + "Press Enter to restart the menu...")
+            input(Fore.RED + "Press Enter to restart the menu...")
             TOKEN = token_management()  # Restart the token selection process
             if TOKEN:
                 bot.run(TOKEN)  # Run again with the new token
