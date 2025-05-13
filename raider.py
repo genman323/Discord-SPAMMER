@@ -118,3 +118,23 @@ async def on_ready():
     except Exception as e:
         display_status(False)
         print(Fore.RED + f"Error during synchronization: {e}")
+
+if __name__ == "__main__":
+    TOKEN = save_token()
+    if TOKEN:
+        try:
+            bot.run(TOKEN)
+        except discord.errors.LoginFailure:
+            print(Fore.RED + "Can't connect to token. Please check your token.")
+            input(Fore.RED + "Press Enter to go back to the menu...")
+            TOKEN = save_token()  # Restart the token selection process
+            if TOKEN:
+                bot.run(TOKEN)  # Run again with the new token
+        except Exception as e:
+            print(Fore.RED + f"An unexpected error occurred: {e}")
+            input(Fore.RED + "Press Enter to restart the menu...")
+            TOKEN = save_token()  # Restart the token selection process
+            if TOKEN:
+                bot.run(TOKEN)  # Run again with the new token
+    else:
+        print(Fore.RED + "❌ Error: Unable to load or set a token.")
