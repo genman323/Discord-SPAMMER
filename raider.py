@@ -36,33 +36,30 @@ def display_status(connected):
     else:
         print(Fore.RED + "Status: Disconnected")
 
-def token_management():
-    os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console before showing token options
-    print(Fore.RED + "Valiance Token Manager\n")
-    print("1. Set new token")
-    print("2. Load previous token")
-    
-    # Adding an empty line between options and the input prompt
-    print()
 
-    choice = input(Fore.RED + "Choose an option (1, 2): ")
+init(autoreset=True)
 
-    if choice == "1":
-        new_token = input(Fore.RED + "Enter the new token: ")
-        save_token(new_token)
-        print(Fore.RED + "Token successfully set!")
-        return new_token
-    elif choice == "2":
-        token = load_token()
-        if token:
-            print(Fore.RED + f"Previous token loaded: {token}")
-            return token
-        else:
-            print(Fore.RED + "No token found.")
-            return None
+TOKEN_FILE = "token.txt"
+
+def save_token(token):
+    with open(TOKEN_FILE, "w") as f:
+        f.write(token)
+
+def load_token():
+    if os.path.exists(TOKEN_FILE):
+        with open(TOKEN_FILE, "r") as f:
+            return f.read().strip()
+    return None
+
+def get_token():
+    token = load_token()
+    if token:
+        print(Fore.RED + "Token loaded successfully.")
+        return token
     else:
-        print(Fore.RED + "Invalid choice. Please try again.")
+        print(Fore.RED + "No token found. Please set one in 'token.txt'.")
         return None
+
 
 intents = discord.Intents.default()
 intents.messages = True  # Enable access to message content
