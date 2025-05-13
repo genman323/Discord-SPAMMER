@@ -5,23 +5,7 @@ import os
 import json
 from colorama import init, Fore, Style
 
-init(autoreset=True)
 
-def save_token(token):
-    with open("token.json", "w") as file:
-        json.dump({"TOKEN": token}, file)
-
-def load_token():
-    try:
-        with open("token.json", "r") as file:
-            data = json.load(file)
-            return data.get("TOKEN")
-    except FileNotFoundError:
-        print(Fore.RED + "Error: token.json not found.")
-        return None
-    except json.JSONDecodeError:
-        print(Fore.RED + "Error: Invalid JSON format in token.json.")
-        return None
 
 def display_logo():
     logo = '''
@@ -134,23 +118,3 @@ async def on_ready():
     except Exception as e:
         display_status(False)
         print(Fore.RED + f"Error during synchronization: {e}")
-
-if __name__ == "__main__":
-    TOKEN = token_management()
-    if TOKEN:
-        try:
-            bot.run(TOKEN)
-        except discord.errors.LoginFailure:
-            print(Fore.RED + "Can't connect to token. Please check your token.")
-            input(Fore.RED + "Press Enter to go back to the menu...")
-            TOKEN = token_management()  # Restart the token selection process
-            if TOKEN:
-                bot.run(TOKEN)  # Run again with the new token
-        except Exception as e:
-            print(Fore.RED + f"An unexpected error occurred: {e}")
-            input(Fore.RED + "Press Enter to restart the menu...")
-            TOKEN = token_management()  # Restart the token selection process
-            if TOKEN:
-                bot.run(TOKEN)  # Run again with the new token
-    else:
-        print(Fore.RED + "❌ Error: Unable to load or set a token.")
