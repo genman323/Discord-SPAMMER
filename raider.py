@@ -45,20 +45,20 @@ def token_management():
     # Adding an empty line between options and the input prompt
     print()
 
-    choice = input(Fore.RED + "Choose an option (1, 2): ")
+    choice = input(Fore.RED + "New Token (1), Load Token(2): ")
 
     if choice == "1":
-        new_token = input(Fore.RED + "Enter the new token: ")
+        new_token = input(Fore.RED + "Load new token: ")
         save_token(new_token)
-        print(Fore.RED + "Token successfully set!")
+        print(Fore.RED + "Token Saved!")
         return new_token
     elif choice == "2":
         token = load_token()
         if token:
-            print(Fore.RED + f"Previous token loaded: {token}")
+            print(Fore.RED + f"Token loaded: {token}")
             return token
         else:
-            print(Fore.RED + "No token found.")
+            print(Fore.RED + "Token Not Found")
             return None
     else:
         print(Fore.RED + "Invalid choice. Please try again.")
