@@ -45,10 +45,10 @@ def token_management():
     # Adding an empty line between options and the input prompt
     print()
 
-    choice = input(Fore.YELLOW + "Choose an option (1, 2): ")
+    choice = input(Fore.RED + "Choose an option (1, 2): ")
 
     if choice == "1":
-        new_token = input(Fore.GREEN + "Enter the new token: ")
+        new_token = input(Fore.RED + "Enter the new token: ")
         save_token(new_token)
         print(Fore.RED + "Token successfully set!")
         return new_token
