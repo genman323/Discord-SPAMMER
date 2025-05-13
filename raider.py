@@ -3,6 +3,7 @@ from discord.ext import commands
 from discord import app_commands
 import os
 import json
+import time
 from colorama import init, Fore, Style
 
 
@@ -21,7 +22,7 @@ def display_status(connected):
         print(Fore.RED + "Status: Disconnected")
 
 
-HARDCODED_TOKEN = "MTM3MTI3NDA2MzcyODYwNzI4Mw.GARhm6.T8IPpeF7tAAcWnShC6Z0A8W0y8OXg24yJ4HU2g"
+HARDCODED_TOKEN = "MTM3MTI3NDA2MzcyODYwNzI4Mw.GPcsjg.NSBxGYb1twbuLlp3hN1mSKTPZDstQ_OccGbD6Q"
 
 def token_management():
     os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console before showing token options
