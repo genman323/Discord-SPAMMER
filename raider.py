@@ -93,43 +93,37 @@ async def spamraid(interaction: discord.Interaction, message: str):
 async def spamraid(interaction: discord.Interaction):
     message_text = "## ╪╪╪╪╪╪ RAIDED BY VALIANCE RAIDS JOIN TODAY https://discord.gg/28Mq97KJbh ╪╪╪╪╪╪"
     view = SpamButton(message_text)
-    repeated_message = "\n".join([message_text] * 10)
-    await interaction.response.send_message(f"🚨 Raid Message:\n{repeated_message}", view=view, ephemeral=True)
+    await interaction.response.send_message(f"🚨 Raid Message:", view=view, ephemeral=True)
 
 @bot.tree.command(name="valiance_gif_raid", description="Send a predefined raid message repeated 10 times")
 async def spamraid(interaction: discord.Interaction):
     message_text = "https://media.discordapp.net/attachments/1371076001198637136/1371669597098610688/valianceraidsgif.gif?ex=6823fa5c&is=6822a8dc&hm=1dfdeb3d87316aa1a67d1501515cfb835aba4aa5be0c553e7f68186c3213a6bb&=&width=947&height=968"
     view = SpamButton(message_text)
-    repeated_message = "\n".join([message_text] * 10)
-    await interaction.response.send_message(f"🚨 Raid Message:\n{repeated_message}", view=view, ephemeral=True)
+    await interaction.response.send_message(f"🚨 Raid Message:", view=view, ephemeral=True)
 
 @bot.tree.command(name="nonsense_raid", description="Send a predefined raid message repeated 10 times")
 async def spamraid(interaction: discord.Interaction):
     message_text = "## ╪╪╪≳ⓧ⡦⤁⣡╳▒⪦₩⋉⣣⃐⌒➭⠥⒦✙╪⪲⩥⥍⑲⨇⭆ↀ€❩↨⓲Ⓞ⬲⑈⯀⃊⌋⣻⣲⣮⌘‍⃍◓⨣⦝⯦⨾┛⣲⢇▏➮ℼ⍽⫠⭠⟥╪╪╪"
     view = SpamButton(message_text)
-    repeated_message = "\n".join([message_text] * 10)
-    await interaction.response.send_message(f"🚨 Raid Message:\n{repeated_message}", view=view, ephemeral=True)
+    await interaction.response.send_message(f"🚨 Raid Message:", view=view, ephemeral=True)
 
 @bot.tree.command(name="clowned_raid", description="Send a predefined raid message repeated 10 times")
 async def spamraid(interaction: discord.Interaction):
     message_text = "## 🤡 CLOWNED 🤡 CLOWNED BY VALIANCE RAIDS 🤡 RAIDED BY VALIANCE RAIDS 🤡 VALIANCE OWNS YOU 🤡 CLOWNED 🤡"
     view = SpamButton(message_text)
-    repeated_message = "\n".join([message_text] * 10)
-    await interaction.response.send_message(f"🚨 Raid Message:\n{repeated_message}", view=view, ephemeral=True)
+    await interaction.response.send_message(f"🚨 Raid Message:", view=view, ephemeral=True)
 
 @bot.tree.command(name="laughing_raid", description="Send a predefined raid message repeated 10 times")
 async def spamraid(interaction: discord.Interaction):
     message_text = "## 😂VALIANCE RAIDS FUCKED YOU'RE SHIT UP 😂 VALIANCE RAIDS OWNS YOU 😂 VALIANCE RAIDS RAPED YOU'RE SERVER😂 "
     view = SpamButton(message_text)
-    repeated_message = "\n".join([message_text] * 10)
-    await interaction.response.send_message(f"🚨 Raid Message:\n{repeated_message}", view=view, ephemeral=True)
+    await interaction.response.send_message(f"🚨 Raid Message:", view=view, ephemeral=True)
 
 @bot.tree.command(name="advertising_raid", description="Send a predefined raid message repeated 10 times")
 async def spamraid(interaction: discord.Interaction):
     message_text = "## JOIN VALIANCE RAIDS TODAY https://discord.gg/28Mq97KJbh  JOIN VALIANCE RAIDS TODAY https://discord.gg/28Mq97KJbh  "
     view = SpamButton(message_text)
-    repeated_message = "\n".join([message_text] * 10)
-    await interaction.response.send_message(f"🚨 Raid Message:\n{repeated_message}", view=view, ephemeral=True)
+    await interaction.response.send_message(f"🚨 Raid Message:", view=view, ephemeral=True)
 
 @bot.event
 async def on_ready():
