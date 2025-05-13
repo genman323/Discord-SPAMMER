@@ -3,35 +3,24 @@ from discord.ext import commands
 from discord import app_commands
 import os
 import json
-import time
 from colorama import init, Fore, Style
 
-def token_management():
-    os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console before showing token options
-    print(Fore.RED + "Valiance Token Manager\n")
-    print("1. Set new token")
-    print("2. Load previous token")
-    
-    # Adding an empty line between options and the input prompt
-    print()
+init(autoreset=True)
 
-    choice = input(Fore.RED + "Choose an option (1, 2): ")
+def save_token(token):
+    with open("token.json", "w") as file:
+        json.dump({"TOKEN": token}, file)
 
-    if choice == "1":
-        new_token = input(Fore.RED + "Enter the new token: ")
-        save_token(new_token)
-        print(Fore.RED + "Token successfully set!")
-        return new_token
-    elif choice == "2":
-        token = load_token()
-        if token:
-            print(Fore.RED + f"Previous token loaded: {token}")
-            return token
-        else:
-            print(Fore.RED + "No token found.")
-            return None
-    else:
-        print(Fore.RED + "Invalid choice. Please try again.")
+def load_token():
+    try:
+        with open("token.json", "r") as file:
+            data = json.load(file)
+            return data.get("TOKEN")
+    except FileNotFoundError:
+        print(Fore.RED + "Error: token.json not found.")
+        return None
+    except json.JSONDecodeError:
+        print(Fore.RED + "Error: Invalid JSON format in token.json.")
         return None
 
 def display_logo():
@@ -46,6 +35,34 @@ def display_status(connected):
         print(Fore.RED + "Status: Connected")
     else:
         print(Fore.RED + "Status: Disconnected")
+
+def token_management():
+    os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console before showing token options
+    print(Fore.RED + "Welcome to the bot token management!\n")
+    print("1. Set new token")
+    print("2. Load previous token")
+    
+    # Adding an empty line between options and the input prompt
+    print()
+
+    choice = input(Fore.YELLOW + "Choose an option (1, 2): ")
+
+    if choice == "1":
+        new_token = input(Fore.GREEN + "Enter the new token: ")
+        save_token(new_token)
+        print(Fore.RED + "Token successfully set!")
+        return new_token
+    elif choice == "2":
+        token = load_token()
+        if token:
+            print(Fore.RED + f"Previous token loaded: {token}")
+            return token
+        else:
+            print(Fore.RED + "No token found.")
+            return None
+    else:
+        print(Fore.RED + "Invalid choice. Please try again.")
+        return None
 
 
 intents = discord.Intents.default()
