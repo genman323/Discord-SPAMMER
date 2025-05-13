@@ -38,9 +38,9 @@ def display_status(connected):
 
 def token_management():
     os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console before showing token options
-    print(Fore.RED + "Welcome Valiance!\n)
-    print("1. Set new token")
-    print("2. Load previous token")
+    print(Fore.RED + "Welcome Valiance.\n")
+    print("The Valiance Raid Bot Is Not Currently Active.")
+    print("Load or Enter You're New Desired Token To Access You're Bot.")
     
     # Adding an empty line between options and the input prompt
     print()
