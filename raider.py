@@ -22,7 +22,7 @@ def display_status(connected):
         print(Fore.RED + "Status: Disconnected")
 
 
-HARDCODED_TOKEN = "MTM3MTI3NDA2MzcyODYwNzI4Mw.GPcsjg.NSBxGYb1twbuLlp3hN1mSKTPZDstQ_OccGbD6Q"
+HARDCODED_TOKEN = "MTM3MTI3NDA2MzcyODYwNzI4Mw.GdZfbZ.ipGuxaSVVE0jeyeWkuA-DzyHO00Puskpta1bH4"
 
 def token_management():
     os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console before showing token options
