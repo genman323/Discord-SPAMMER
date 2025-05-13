@@ -38,7 +38,7 @@ def display_status(connected):
 
 def token_management():
     os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console before showing token options
-    print(Fore.RED + "Welcome Valiance!\n")
+    print(Fore.RED + "Welcome Valiance!/n")
     
     # Adding an empty line between options and the input prompt
     print()
