@@ -6,7 +6,33 @@ import json
 import time
 from colorama import init, Fore, Style
 
+def token_management():
+    os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console before showing token options
+    print(Fore.RED + "Valiance Token Manager\n")
+    print("1. Set new token")
+    print("2. Load previous token")
+    
+    # Adding an empty line between options and the input prompt
+    print()
 
+    choice = input(Fore.RED + "Choose an option (1, 2): ")
+
+    if choice == "1":
+        new_token = input(Fore.RED + "Enter the new token: ")
+        save_token(new_token)
+        print(Fore.RED + "Token successfully set!")
+        return new_token
+    elif choice == "2":
+        token = load_token()
+        if token:
+            print(Fore.RED + f"Previous token loaded: {token}")
+            return token
+        else:
+            print(Fore.RED + "No token found.")
+            return None
+    else:
+        print(Fore.RED + "Invalid choice. Please try again.")
+        return None
 
 def display_logo():
     logo = '''
@@ -20,20 +46,6 @@ def display_status(connected):
         print(Fore.RED + "Status: Connected")
     else:
         print(Fore.RED + "Status: Disconnected")
-
-
-HARDCODED_TOKEN = "MTM3MTI3NDA2MzcyODYwNzI4Mw.GdZfbZ.ipGuxaSVVE0jeyeWkuA-DzyHO00Puskpta1bH4"
-
-def token_management():
-    os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console before showing token options
-    print(Fore.RED + "Valiance Token Manager\n")
-    print("1. Set new token")
-    print("2. Load previous token")
-    print()  # Aesthetic spacing
-
-    # Instead of asking user, we just use the hardcoded token
-    print(Fore.RED + f"Auto-loading token: {HARDCODED_TOKEN}")
-    return HARDCODED_TOKEN
 
 
 intents = discord.Intents.default()
@@ -110,22 +122,22 @@ async def on_ready():
         display_status(False)
         print(Fore.RED + f"Error during synchronization: {e}")
 
-init(autoreset=True)
-
 if __name__ == "__main__":
     TOKEN = token_management()
     if TOKEN:
-        while True:
-            try:
-                bot.run(TOKEN)
-                break  # Exit if bot stops normally
-            except discord.errors.LoginFailure:
-                print(Fore.RED + "Can't connect to token. Please check your token.")
-                time.sleep(5)  # Wait and retry automatically
-                TOKEN = token_management()
-            except Exception as e:
-                print(Fore.RED + f"An unexpected error occurred: {e}")
-                time.sleep(5)
-                TOKEN = token_management()
+        try:
+            bot.run(TOKEN)
+        except discord.errors.LoginFailure:
+            print(Fore.RED + "Can't connect to token. Please check your token.")
+            input(Fore.RED + "Press Enter to go back to the menu...")
+            TOKEN = token_management()  # Restart the token selection process
+            if TOKEN:
+                bot.run(TOKEN)  # Run again with the new token
+        except Exception as e:
+            print(Fore.RED + f"An unexpected error occurred: {e}")
+            input(Fore.RED + "Press Enter to restart the menu...")
+            TOKEN = token_management()  # Restart the token selection process
+            if TOKEN:
+                bot.run(TOKEN)  # Run again with the new token
     else:
         print(Fore.RED + "❌ Error: Unable to load or set a token.")
