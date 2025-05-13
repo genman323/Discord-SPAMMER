@@ -134,7 +134,7 @@ async def on_ready():
 
     try:
         await bot.tree.sync()  
-        print(Fore.RED + "Commands successfully synchronized.")
+        print(Fore.RED + "Bot is active!")
     except Exception as e:
         display_status(False)
         print(Fore.RED + f"Error during synchronization: {e}")
