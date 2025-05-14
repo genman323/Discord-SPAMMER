@@ -92,7 +92,7 @@ async def spamraid(interaction: discord.Interaction, message: str):
 
 @bot.tree.command(name="raid", description="Raid.")
 async def spamraid(interaction: discord.Interaction):
-    message_text = "## ╪╪╪╪╪╪ RAIDED BY VALIANCE RAIDS JOIN TODAY https://discord.gg/28Mq97KJbh ╪╪╪╪╪╪"
+    message_text = "## ╪╪╪╪╪╪ RAIDED BY VALIANCE RAIDS JOIN TODAY https://discord.gg/28Mq97KJbh ╪╪╪╪╪╪ https://media.discordapp.net/attachments/1370900523578032140/1372042255032127508/hah.gif?ex=6825556c&is=682403ec&hm=ab4a58bb3f05e6d153b3d8ae256aaee76c5cc69dd21a7de308ae5c3347f8a913&="
     view = SpamButton(message_text)
     await interaction.response.send_message(f"🚨 Do You Want To Proceed?", view=view, ephemeral=True)
 
@@ -116,7 +116,7 @@ async def spamraid(interaction: discord.Interaction):
 
 @bot.tree.command(name="laughing_raid", description="Laughing Raid.")
 async def spamraid(interaction: discord.Interaction):
-    message_text = "## 😂VALIANCE RAIDS FUCKED YOU'RE SHIT UP 😂 VALIANCE RAIDS OWNS YOU 😂 VALIANCE RAIDS RAPED YOU'RE SERVER😂 "
+    message_text = "## 😂VALIANCE RAIDS FUCKED YOU'RE SHIT UP😂VALIANCE RAIDS OWNS YOU😂VALIANCE RAIDS RAPED YOU'RE SERVER😂 "
     view = SpamButton(message_text)
     await interaction.response.send_message(f"🚨 Do You Want To Proceed?", view=view, ephemeral=True)
 
@@ -126,11 +126,7 @@ async def spamraid(interaction: discord.Interaction):
     view = SpamButton(message_text)
     await interaction.response.send_message(f"🚨 Do You Want To Proceed?", view=view, ephemeral=True)
 
-@bot.tree.command(name="flashing_raid", description="Advertising Raid.")
-async def spamraid(interaction: discord.Interaction):
-    message_text = "## :black_cross: RAPED BY VALIANCE RAIDS:black_cross:https://discord.gg/PrNPbzhYve :black_cross: JOIN VALIANCE RAIDS TODAY:black_cross:"
-    view = SpamButton(message_text)
-    await interaction.response.send_message(f"🚨 Do You Want To Proceed?", view=view, ephemeral=True)
+
 
 @bot.event
 async def on_ready():
