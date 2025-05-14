@@ -98,7 +98,7 @@ async def spamraid(interaction: discord.Interaction):
 
 @bot.tree.command(name="gif_raid", description="Gif Raid")
 async def spamraid(interaction: discord.Interaction):
-    message_text = "https://media.discordapp.net/attachments/1371076001198637136/1372027134863736893/raIDSbot177.gif?ex=68254757&is=6823f5d7&hm=8e6b520a0823dd1ef71843ef0ca681028e698b2fedd00b6b2fa4de7e1cf4a4ab&=&width=979&height=968"
+    message_text = "https://media.discordapp.net/attachments/1371076001198637136/1372027134863736893/raIDSbot177.gif?ex=68254757&is=6823f5d7&hm=8e6b520a0823dd1ef71843ef0ca681028e698b2fedd00b6b2fa4de7e1cf4a4ab&=&width=979&height=968 https://media.discordapp.net/attachments/1370900523578032140/1372042255032127508/hah.gif?ex=6825556c&is=682403ec&hm=ab4a58bb3f05e6d153b3d8ae256aaee76c5cc69dd21a7de308ae5c3347f8a913&="
     view = SpamButton(message_text)
     await interaction.response.send_message(f"🚨 Do You Want To Proceed?", view=view, ephemeral=True)
 
@@ -126,11 +126,7 @@ async def spamraid(interaction: discord.Interaction):
     view = SpamButton(message_text)
     await interaction.response.send_message(f"🚨 Do You Want To Proceed?", view=view, ephemeral=True)
 
-@bot.tree.command(name="laughgif_raid", description="Advertising Raid.")
-async def spamraid(interaction: discord.Interaction):
-    message_text = "https://media.discordapp.net/attachments/1370900523578032140/1372042255032127508/hah.gif?ex=6825556c&is=682403ec&hm=ab4a58bb3f05e6d153b3d8ae256aaee76c5cc69dd21a7de308ae5c3347f8a913&="
-    view = SpamButton(message_text)
-    await interaction.response.send_message(f"🚨 Do You Want To Proceed?", view=view, ephemeral=True)
+
 
 
 
