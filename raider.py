@@ -84,45 +84,45 @@ class SpamButton(discord.ui.View):
         for _ in range(5):  
             await interaction.followup.send(self.message)  
 
-@bot.tree.command(name="custom_raid", description="Send a message and generate a button to spam")
+@bot.tree.command(name="custom_raid", description="Custom Raid.")
 @app_commands.describe(message="The message you want to spam")
 async def spamraid(interaction: discord.Interaction, message: str):
     view = SpamButton(message)
     await interaction.response.send_message(f"🚨 Do You Want To Proceed?  {message}", view=view, ephemeral=True)  
 
-@bot.tree.command(name="raid", description="Send a predefined raid message repeated 10 times")
+@bot.tree.command(name="raid", description="Raid.")
 async def spamraid(interaction: discord.Interaction):
     message_text = "## ╪╪╪╪╪╪ RAIDED BY VALIANCE RAIDS JOIN TODAY https://discord.gg/28Mq97KJbh ╪╪╪╪╪╪"
     view = SpamButton(message_text)
     await interaction.response.send_message(f"🚨 Do You Want To Proceed?", view=view, ephemeral=True)
 
-@bot.tree.command(name="valiance_gif_raid", description="Send a predefined raid message repeated 10 times")
+@bot.tree.command(name="gif_raid", description="Gif Raid")
 async def spamraid(interaction: discord.Interaction):
-    message_text = "https://media.discordapp.net/attachments/1371076001198637136/1371669597098610688/valianceraidsgif.gif?ex=6823fa5c&is=6822a8dc&hm=1dfdeb3d87316aa1a67d1501515cfb835aba4aa5be0c553e7f68186c3213a6bb&=&width=947&height=968"
+    message_text = "https://media.discordapp.net/attachments/1371076001198637136/1372027134863736893/raIDSbot177.gif?ex=68254757&is=6823f5d7&hm=8e6b520a0823dd1ef71843ef0ca681028e698b2fedd00b6b2fa4de7e1cf4a4ab&=&width=979&height=968"
     view = SpamButton(message_text)
     await interaction.response.send_message(f"🚨 Do You Want To Proceed?", view=view, ephemeral=True)
 
-@bot.tree.command(name="nonsense_raid", description="Send a predefined raid message repeated 10 times")
+@bot.tree.command(name="nonsense_raid", description="Random Letter Raid.")
 async def spamraid(interaction: discord.Interaction):
     message_text = "## ╪╪╪≳ⓧ⡦⤁⣡╳▒⪦₩⋉⣣⃐⌒➭⠥⒦✙╪⪲⩥⥍⑲⨇⭆ↀ€❩↨⓲Ⓞ⬲⑈⯀⃊⌋⣻⣲⣮⌘‍⃍◓⨣⦝⯦⨾┛⣲⢇▏➮ℼ⍽⫠⭠⟥╪╪╪"
     view = SpamButton(message_text)
     await interaction.response.send_message(f"🚨 Do You Want To Proceed?", view=view, ephemeral=True)
 
-@bot.tree.command(name="clowned_raid", description="Send a predefined raid message repeated 10 times")
+@bot.tree.command(name="clowned_raid", description="Clowned Raid.")
 async def spamraid(interaction: discord.Interaction):
     message_text = "## 🤡 CLOWNED 🤡 CLOWNED BY VALIANCE RAIDS 🤡 RAIDED BY VALIANCE RAIDS 🤡 VALIANCE OWNS YOU 🤡 CLOWNED 🤡"
     view = SpamButton(message_text)
     await interaction.response.send_message(f"🚨 Do You Want To Proceed?", view=view, ephemeral=True)
 
-@bot.tree.command(name="laughing_raid", description="Send a predefined raid message repeated 10 times")
+@bot.tree.command(name="laughing_raid", description="Laughing Raid.")
 async def spamraid(interaction: discord.Interaction):
     message_text = "## 😂VALIANCE RAIDS FUCKED YOU'RE SHIT UP 😂 VALIANCE RAIDS OWNS YOU 😂 VALIANCE RAIDS RAPED YOU'RE SERVER😂 "
     view = SpamButton(message_text)
     await interaction.response.send_message(f"🚨 Do You Want To Proceed?", view=view, ephemeral=True)
 
-@bot.tree.command(name="advertising_raid", description="Send a predefined raid message repeated 10 times")
+@bot.tree.command(name="advertising_raid", description="Advertising Raid.")
 async def spamraid(interaction: discord.Interaction):
-    message_text = "## JOIN VALIANCE RAIDS TODAY https://discord.gg/28Mq97KJbh  JOIN VALIANCE RAIDS TODAY https://discord.gg/28Mq97KJbh  "
+    message_text = "## JOIN SERVER https://discord.gg/28Mq97KJbh  JOIN SERVER https://discord.gg/28Mq97KJbh  "
     view = SpamButton(message_text)
     await interaction.response.send_message(f"🚨 Do You Want To Proceed?", view=view, ephemeral=True)
 
@@ -130,7 +130,7 @@ async def spamraid(interaction: discord.Interaction):
 async def on_ready():
     display_logo()
     display_status(True)
-    print("Connected as " + Fore.RED + f"{bot.user}")
+    print("You are connected! " + Fore.RED + f"{bot.user}")
 
     try:
         await bot.tree.sync()  
