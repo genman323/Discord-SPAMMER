@@ -126,6 +126,12 @@ async def spamraid(interaction: discord.Interaction):
     view = SpamButton(message_text)
     await interaction.response.send_message(f"🚨 Do You Want To Proceed?", view=view, ephemeral=True)
 
+@bot.tree.command(name="flashing_raid", description="Advertising Raid.")
+async def spamraid(interaction: discord.Interaction):
+    message_text = "## :black_cross: RAPED BY VALIANCE RAIDS:black_cross:https://discord.gg/PrNPbzhYve :black_cross: JOIN VALIANCE RAIDS TODAY:black_cross:"
+    view = SpamButton(message_text)
+    await interaction.response.send_message(f"🚨 Do You Want To Proceed?", view=view, ephemeral=True)
+
 @bot.event
 async def on_ready():
     display_logo()
