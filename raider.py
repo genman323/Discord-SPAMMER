@@ -110,13 +110,13 @@ async def spamraid(interaction: discord.Interaction):
 
 @bot.tree.command(name="clowned_raid", description="Clowned Raid.")
 async def spamraid(interaction: discord.Interaction):
-    message_text = "## 🤡 ℂ𝕃𝕆𝕎ℕ𝔼𝔻 🤡 ℂ𝕃𝕆𝕎ℕ𝔼𝔻 𝔹𝕐 𝕍𝔸𝕃𝕀𝔸ℕℂ𝔼 ℝ𝔸𝕀𝔻𝕊 🤡 ℝ𝔸𝕀𝔻𝔼𝔻 𝔹𝕐 𝕍𝔸𝕃𝕀𝔸ℕℂ𝔼 ℝ𝔸𝕀𝔻𝕊 🤡 𝕍𝔸𝕃𝕀𝔸ℕℂ𝔼 𝕆𝕎ℕ𝕊 𝕐𝕆𝕌 🤡 ℂ𝕃𝔸ℙℙ𝔼𝔻 🤡 ℂ𝕃𝕆𝕎ℕ𝔼𝔻 🤡"
+    message_text = "## 🤡 ℂ𝕃𝕆𝕎ℕ𝔼𝔻🤡ℂ𝕃𝕆𝕎ℕ𝔼𝔻 𝔹𝕐 𝕍𝔸𝕃𝕀𝔸ℕℂ𝔼 ℝ𝔸𝕀𝔻𝕊🤡ℝ𝔸𝕀𝔻𝔼𝔻 𝔹𝕐 𝕍𝔸𝕃𝕀𝔸ℕℂ𝔼 ℝ𝔸𝕀𝔻𝕊🤡ℂ𝕃𝕆𝕎ℕ𝔼𝔻🤡"
     view = SpamButton(message_text)
     await interaction.response.send_message(f"🚨 Do You Want To Proceed?", view=view, ephemeral=True)
 
 @bot.tree.command(name="laughing_raid", description="Laughing Raid.")
 async def spamraid(interaction: discord.Interaction):
-    message_text = "## 😂𝕍𝔸𝕃𝕀𝔸ℕℂ𝔼 ℝ𝔸𝕀𝔻𝕊 𝔽𝕌ℂ𝕂𝔼𝔻 𝕐𝕆𝕌'ℝ𝔼 𝕊ℍ𝕀𝕋 𝕌ℙ😂𝕍𝔸𝕃𝕀𝔸ℕℂ𝔼 ℝ𝔸𝕀𝔻𝕊 𝕆𝕎ℕ𝕊 𝕐𝕆𝕌😂𝕍𝔸𝕃𝕀𝔸ℕℂ𝔼 ℝ𝔸𝕀𝔻𝕊 ℝ𝔸ℙ𝔼𝔻 𝕐𝕆𝕌'ℝ𝔼 𝕊𝔼ℝ𝕍𝔼ℝ😂 "
+    message_text = "## 😂𝔸𝕃𝕀𝔸ℕℂ𝔼 ℝ𝔸𝕀𝔻𝕊 ℝ𝔸ℙ𝔼𝔻 𝕐𝕆𝕌'ℝ𝔼 𝕊𝔼ℝ𝕍𝔼ℝ😂ℝ𝔸𝕀𝔻𝔼𝔻😂𝕍𝔸𝕃𝕀𝔸ℕℂ𝔼 ℝ𝔸𝕀𝔻𝕊 ℝ𝔸ℙ𝔼𝔻 𝕐𝕆𝕌'ℝ𝔼 𝕊𝔼ℝ𝕍𝔼ℝ😂 "
     view = SpamButton(message_text)
     await interaction.response.send_message(f"🚨 Do You Want To Proceed?", view=view, ephemeral=True)
 
