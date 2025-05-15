@@ -92,7 +92,7 @@ async def spamraid(interaction: discord.Interaction, message: str):
 
 @bot.tree.command(name="raid", description="Raid.")
 async def spamraid(interaction: discord.Interaction):
-    message_text = "## ╪╪╪╪╪╪ RAIDED BY VALIANCE RAIDS JOIN TODAY https://discord.gg/28Mq97KJbh ╪╪╪╪╪╪ "
+    message_text = "## ╪╪╪╪╪╪ ℝ𝔸𝕀𝔻𝔼𝔻 𝔹𝕐 𝕍𝔸𝕃𝕀𝔸ℕℂ𝔼 ℝ𝔸𝕀𝔻𝕊 𝕁𝕆𝕀ℕ 𝕋𝕆𝔻𝔸𝕐 https://discord.gg/28Mq97KJbh ╪╪╪╪╪╪ "
     view = SpamButton(message_text)
     await interaction.response.send_message(f"🚨 Do You Want To Proceed?", view=view, ephemeral=True)
 
@@ -110,19 +110,19 @@ async def spamraid(interaction: discord.Interaction):
 
 @bot.tree.command(name="clowned_raid", description="Clowned Raid.")
 async def spamraid(interaction: discord.Interaction):
-    message_text = "## 🤡 CLOWNED 🤡 CLOWNED BY VALIANCE RAIDS 🤡 RAIDED BY VALIANCE RAIDS 🤡 VALIANCE OWNS YOU 🤡 CLOWNED 🤡"
+    message_text = "## 🤡 ℂ𝕃𝕆𝕎ℕ𝔼𝔻 🤡 ℂ𝕃𝕆𝕎ℕ𝔼𝔻 𝔹𝕐 𝕍𝔸𝕃𝕀𝔸ℕℂ𝔼 ℝ𝔸𝕀𝔻𝕊 🤡 ℝ𝔸𝕀𝔻𝔼𝔻 𝔹𝕐 𝕍𝔸𝕃𝕀𝔸ℕℂ𝔼 ℝ𝔸𝕀𝔻𝕊 🤡 𝕍𝔸𝕃𝕀𝔸ℕℂ𝔼 𝕆𝕎ℕ𝕊 𝕐𝕆𝕌 🤡 ℂ𝕃𝔸ℙℙ𝔼𝔻 🤡 ℂ𝕃𝕆𝕎ℕ𝔼𝔻 🤡"
     view = SpamButton(message_text)
     await interaction.response.send_message(f"🚨 Do You Want To Proceed?", view=view, ephemeral=True)
 
 @bot.tree.command(name="laughing_raid", description="Laughing Raid.")
 async def spamraid(interaction: discord.Interaction):
-    message_text = "## 😂VALIANCE RAIDS FUCKED YOU'RE SHIT UP😂VALIANCE RAIDS OWNS YOU😂VALIANCE RAIDS RAPED YOU'RE SERVER😂 "
+    message_text = "## 😂𝕍𝔸𝕃𝕀𝔸ℕℂ𝔼 ℝ𝔸𝕀𝔻𝕊 𝔽𝕌ℂ𝕂𝔼𝔻 𝕐𝕆𝕌'ℝ𝔼 𝕊ℍ𝕀𝕋 𝕌ℙ😂𝕍𝔸𝕃𝕀𝔸ℕℂ𝔼 ℝ𝔸𝕀𝔻𝕊 𝕆𝕎ℕ𝕊 𝕐𝕆𝕌😂𝕍𝔸𝕃𝕀𝔸ℕℂ𝔼 ℝ𝔸𝕀𝔻𝕊 ℝ𝔸ℙ𝔼𝔻 𝕐𝕆𝕌'ℝ𝔼 𝕊𝔼ℝ𝕍𝔼ℝ😂 "
     view = SpamButton(message_text)
     await interaction.response.send_message(f"🚨 Do You Want To Proceed?", view=view, ephemeral=True)
 
 @bot.tree.command(name="advertising_raid", description="Advertising Raid.")
 async def spamraid(interaction: discord.Interaction):
-    message_text = "## JOIN SERVER https://discord.gg/28Mq97KJbh  JOIN SERVER https://discord.gg/28Mq97KJbh  "
+    message_text = "## 𝕁𝕆𝕀ℕ 𝕊𝔼ℝ𝕍𝔼ℝ https://discord.gg/28Mq97KJbh  𝕁𝕆𝕀ℕ 𝕊𝔼ℝ𝕍𝔼ℝ https://discord.gg/28Mq97KJbh  "
     view = SpamButton(message_text)
     await interaction.response.send_message(f"🚨 Do You Want To Proceed?", view=view, ephemeral=True)
 
