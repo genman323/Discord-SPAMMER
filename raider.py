@@ -25,7 +25,7 @@ def load_token():
 
 def display_logo():
     logo = '''
--- VALIANCE RAIDS --
+-- PICO RAIDS [v1.1 made by valiance] --
 '''
     os.system('cls' if os.name == 'nt' else 'clear')  
     print(Fore.MAGENTA + logo)
@@ -39,7 +39,7 @@ def display_status(connected):
 def token_management():
     os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console before showing token options
     print(Fore.MAGENTA + "Welcome Valiance.\n")
-    print("The Valiance Raid Bot Is Not Currently Active.")
+    print("The Pico Raid Bot Is Not Currently Active.")
     print("Load or Enter You're New Desired Token To Access You're Bot.")
     
     # Adding an empty line between options and the input prompt
@@ -92,39 +92,33 @@ async def spamraid(interaction: discord.Interaction, message: str):
 
 @bot.tree.command(name="raid", description="Raid.")
 async def spamraid(interaction: discord.Interaction):
-    message_text = "## ╪╪╪╪╪╪ ℝ𝔸𝕀𝔻𝔼𝔻 𝔹𝕐 𝕍𝔸𝕃𝕀𝔸ℕℂ𝔼 ℝ𝔸𝕀𝔻𝕊 𝕁𝕆𝕀ℕ 𝕋𝕆𝔻𝔸𝕐 https://discord.gg/28Mq97KJbh ╪╪╪╪╪╪ "
+    message_text = "## ╪╪╪╪╪╪ RAIDED BY PICO RAIDS JOIN TODAY https://discord.gg/j8HFwrhMgz ╪╪╪╪╪╪ "
     view = SpamButton(message_text)
     await interaction.response.send_message(f"🚨 Do You Want To Proceed?", view=view, ephemeral=True)
 
 @bot.tree.command(name="gif_raid", description="Gif Raid")
 async def spamraid(interaction: discord.Interaction):
-    message_text = "https://media.discordapp.net/attachments/1371076001198637136/1372027134863736893/raIDSbot177.gif?ex=68254757&is=6823f5d7&hm=8e6b520a0823dd1ef71843ef0ca681028e698b2fedd00b6b2fa4de7e1cf4a4ab&=&width=979&height=968 "
+    message_text = "https://cdn.discordapp.com/attachments/1365744717261967445/1373164800254803968/gfdfgbfgd.gif?ex=68296ae0&is=68281960&hm=f6603a5b02d4b6ae7f6db4331fcccb8313f17e53b88a6a45c9fa555e574041c7&width=978&height=968"
     view = SpamButton(message_text)
     await interaction.response.send_message(f"🚨 Do You Want To Proceed?", view=view, ephemeral=True)
 
 @bot.tree.command(name="nonsense_raid", description="Random Letter Raid.")
 async def spamraid(interaction: discord.Interaction):
-    message_text = "## ╪╪╪≳ⓧ⡦⤁⣡╳▒⪦₩⋉⣣⃐⌒➭⠥⒦✙╪⪲⩥⥍⑲⨇⭆ↀ€❩↨⓲Ⓞ⬲⑈⯀⃊⌋⣻⣲⣮⌘‍⃍◓⨣⦝⯦⨾┛⣲⢇▏➮ℼ⍽⫠⭠⟥╪╪╪"
+    message_text = "## PICO RAIDS OWNS YOUR SERVER😂"
     view = SpamButton(message_text)
     await interaction.response.send_message(f"🚨 Do You Want To Proceed?", view=view, ephemeral=True)
 
-@bot.tree.command(name="clowned_raid", description="Clowned Raid.")
+@bot.tree.command(name="advertise_raid", description="Clowned Raid.")
 async def spamraid(interaction: discord.Interaction):
-    message_text = "## 🤡 ℂ𝕃𝕆𝕎ℕ𝔼𝔻🤡ℂ𝕃𝕆𝕎ℕ𝔼𝔻 𝔹𝕐 𝕍𝔸𝕃𝕀𝔸ℕℂ𝔼 ℝ𝔸𝕀𝔻𝕊🤡ℝ𝔸𝕀𝔻𝔼𝔻 𝔹𝕐 𝕍𝔸𝕃𝕀𝔸ℕℂ𝔼 ℝ𝔸𝕀𝔻𝕊🤡ℂ𝕃𝕆𝕎ℕ𝔼𝔻🤡"
+    message_text = "## https://discord.gg/j8HFwrhMgz https://discord.gg/j8HFwrhMgz https://discord.gg/j8HFwrhMgz"
     view = SpamButton(message_text)
     await interaction.response.send_message(f"🚨 Do You Want To Proceed?", view=view, ephemeral=True)
 
-@bot.tree.command(name="laughing_raid", description="Laughing Raid.")
+@bot.tree.command(name="mama_raid", description="Laughing Raid.")
 async def spamraid(interaction: discord.Interaction):
-    message_text = "## 😂ℝ𝔸ℙ𝔼𝔻😂ℝ𝔸ℙ𝔼𝔻 𝔹𝕐 𝕍𝔸𝕃𝕀𝔸ℕℂ𝔼 ℝ𝔸𝕀𝔻😂ℝ𝔸𝕀𝔻𝔼𝔻 𝔹𝕐 𝕍𝔸𝕃𝕀𝔸ℕℂ𝔼 ℝ𝔸𝕀𝔻𝕊😂ℝ𝔸ℙ𝔼𝔻😂 "
+    message_text = "WE PUT OUR COCK IN YOUF MAMAS, WE MADE HER MOAN, SHE WANT TO SUCK OUR COCK, YOUR DAD IS WATCHNG , HE IS NOT BACK FOR YOU NIGGER "
     view = SpamButton(message_text)
-    await interaction.response.send_message(f"🚨 Do You Want To Proceed?", view=view, ephemeral=True)
-
-@bot.tree.command(name="advertising_raid", description="Advertising Raid.")
-async def spamraid(interaction: discord.Interaction):
-    message_text = "## 𝕁𝕆𝕀ℕ 𝕊𝔼ℝ𝕍𝔼ℝ https://discord.gg/28Mq97KJbh  𝕁𝕆𝕀ℕ 𝕊𝔼ℝ𝕍𝔼ℝ https://discord.gg/28Mq97KJbh  "
-    view = SpamButton(message_text)
-    await interaction.response.send_message(f"🚨 Do You Want To Proceed?", view=view, ephemeral=True)
+    await interaction.response.send_message(f"🚨 Do You Want To Proceed?", view=view, ephemeral=Tru
 
 
 
