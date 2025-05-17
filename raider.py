@@ -25,7 +25,7 @@ def load_token():
 
 def display_logo():
     logo = '''
--- PICO RAIDS v1.1 made by vaiance --
+-- PICO RAIDS [v1.1 made by vaiance] --
 '''
     os.system('cls' if os.name == 'nt' else 'clear')  
     print(Fore.MAGENTA + logo)
@@ -118,7 +118,7 @@ async def spamraid(interaction: discord.Interaction):
 async def spamraid(interaction: discord.Interaction):
     message_text = "WE PUT OUR COCK IN YOUF MAMAS, WE MADE HER MOAN, SHE WANT TO SUCK OUR COCK, YOUR DAD IS WATCHNG , HE IS NOT BACK FOR YOU NIGGER "
     view = SpamButton(message_text)
-    await interaction.response.send_message(f"🚨 Do You Want To Proceed?", view=view, ephemeral=Tru
+    await interaction.response.send_message(f"🚨 Do You Want To Proceed?", view=view, ephemeral=True)
 
 
 
