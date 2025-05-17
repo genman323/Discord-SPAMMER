@@ -25,7 +25,7 @@ def load_token():
 
 def display_logo():
     logo = '''
--- PICO RAIDS [v1.1 made by valiance] --
+-- PICO RAIDS v1.1 made by vaiance --
 '''
     os.system('cls' if os.name == 'nt' else 'clear')  
     print(Fore.MAGENTA + logo)
@@ -38,7 +38,7 @@ def display_status(connected):
 
 def token_management():
     os.system('cls' if os.name == 'nt' else 'clear')  # Clear the console before showing token options
-    print(Fore.MAGENTA + "Welcome Valiance.\n")
+    print(Fore.MAGENTA + "Welcome Pico Hoster\n")
     print("The Pico Raid Bot Is Not Currently Active.")
     print("Load or Enter You're New Desired Token To Access You're Bot.")
     
